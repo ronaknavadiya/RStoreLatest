@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.rstore.Buyers.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+   <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.rstore.Buyers.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.rstore.Buyers.ui.Cart.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/cart_fragment" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.rstore.Buyers.ui.Settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/settings_fragment" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.rstore.Buyers.ui.Orders.OrdersFragment"
+        android:label="Search"
+        tools:layout="@layout/orders_fragment" />
+
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.example.rstore.Buyers.ui.Categories.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/categories_fragment" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.rstore.Buyers.ui.Logout.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/logout_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.rstore.Sellers.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.example.rstore.Sellers.ui.dashboard.DashboardFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_logout"
+        android:name="com.example.rstore.Sellers.ui.notifications.NotificationsFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_notifications" />
+
+
+
+
+
+
+</navigation>
